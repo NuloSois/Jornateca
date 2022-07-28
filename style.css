@@ -3,13 +3,19 @@
         --mordecai-grey-d: hsl(214, 30%, 16%);
         --margaret-grey: hsl(0, 20%, 46%);
         --margaret-grey-d: hsl(0, 29%, 16%);
+        --pops-pink: hsl(337, 20%, 46%);
+        --pops-pink-d: hsl(337, 20%, 16%);
+        --muscleman-green: hsl(109, 20%, 46%);
+        --muscleman-green-d: hsl(109, 20%, 16%);
 
         --margin-x: 10vw;
         --margin-y: 10vh;
+        --stagger-delay: 1ms;
 }
 
 body {
     background: var(--mordecai-grey);
+    animation: bgloop 60s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     
     overflow: hidden;
 }
@@ -33,9 +39,19 @@ body, html {
     margin-right: var(--margin-x);
     margin-top: var(--margin-y);
     margin-bottom: var(--margin-y);
-    border: 3px solid var(--mordecai-grey-d);
+
+    padding-left: calc(0.1*var(--margin-x));
+    padding-right: calc(0.1*var(--margin-x));
+    padding-top: calc(0.1*var(--margin-y));
+    padding-bottom: calc(0.1*var(--margin-y));
     background: var(--margaret-grey);
-    box-shadow: 10px 10px 5px var(--mordecai-grey-d);
+
+    border: 3px solid var(--borderColor);
+    animation: borderloop 60s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    
+    animation: borderloop 60s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    animation-delay: borderloop 100ms;
+    box-shadow: 10px 10px 5px var(--shadowColor);
 }
 .card {
     background-image: unset;
@@ -47,97 +63,181 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    animation: entrance 400ms normal forwards ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.card:hover {
+    --stagger-delay: 0001ms;
+    transform: translateY(-3px) scale(1.1);
+    animation: zoom 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoom {
+    0% {
+        transform: translateY(-3px) scale(1.05);
+    }
+    50% {
+        transform: translateY(-3px) scale(1.15);
+    }
+    100% {
+        transform: translateY(-3px) scale(1.1);
+    }
+    
+}
+
+@keyframes entrance {
+    from {
+        --stagger-delay: 100ms;
+        opacity: 0.1;
+        transform: scale(0.3);
+        filter: hue-rotate(180deg);
+    }
+    to {
+        --stagger-delay: 100ms;
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+        
+    }
+    
+}
+
+@keyframes bgloop {
+    100% {
+        background-color: var(--margaret-grey);
+    }
+    66% {
+        background-color: var(--muscleman-green);
+    }
+    33% {
+        background-color: var(--pops-pink);
+    }
+    0% {
+        background-color: var(--mordecai-grey);
+    }
+}
+
+@keyframes borderloop {
+    100% {
+       --borderColor: var(--margaret-grey-d);
+    }
+    66% {
+        --borderColor: var(--muscleman-green-d);
+    }
+    33% {
+        --borderColor: var(--pops-pink-d);
+    }
+    0% {
+        --borderColor: var(--mordecai-grey-d);
+    }
+}
+
+@keyframes shadowloop {
+    100% {
+       --shadowColor: var(--margaret-grey-d);
+    }
+    66% {
+        --shadowColor: var(--muscleman-green-d);
+    }
+    33% {
+        --shadowColor: var(--pops-pink-d);
+    }
+    0% {
+        --shadowColor: var(--mordecai-grey-d);
+    }
 }
 
 .card:nth-child(1) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: a;
-    animation-delay: calc(1 * var(--stagger-delay));
+    animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(2) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: b;
-    animation-delay: calc(2 * var(--stagger-delay));
+    animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(3) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: c;
-    animation-delay: calc(3 * var(--stagger-delay));
+    animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(4) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: d;
-    animation-delay: calc(4 * var(--stagger-delay));
+    animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(5) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: e;
-    animation-delay: calc(5 * var(--stagger-delay));
+    animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(6) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: f;
-    animation-delay: calc(6 * var(--stagger-delay));
+    animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(7) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: g;
-    animation-delay: calc(7 * var(--stagger-delay));
+    animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(8) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: h;
-    animation-delay: calc(8 * var(--stagger-delay));
+    animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(9) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: i;
-    animation-delay: calc(9 * var(--stagger-delay));
+    animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(10) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: j;
-    animation-delay: calc(10 * var(--stagger-delay));
+    animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(11) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: k;
-    animation-delay: calc(11 * var(--stagger-delay));
+    animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(12) {
     background-image: url(Resources/book.png);
     background-repeat: round;
     grid-area: l;
-    animation-delay: calc(12 * var(--stagger-delay));
+    animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:last-child {
     background-image: url(Resources/Drive.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 256px 256px;
     background-position: center;
     grid-area: main;
-    animation-delay: calc(13 * var(--stagger-delay));
+    animation-delay: calc(400 * var(--stagger-delay));
 }
