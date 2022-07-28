@@ -1,1 +1,143 @@
+:root{
+        --mordecai-grey: hsl(214, 20%, 46%);
+        --mordecai-grey-d: hsl(214, 30%, 16%);
+        --margaret-grey: hsl(0, 20%, 46%);
+        --margaret-grey-d: hsl(0, 29%, 16%);
 
+        --margin-x: 10vw;
+        --margin-y: 10vh;
+}
+
+body {
+    background: var(--mordecai-grey);
+    
+    overflow: hidden;
+}
+
+body, html {
+    height: 100%;
+}
+
+.grid {
+    
+    grid-template-areas:
+    'a  b  c  d'
+    'l  main main e'
+    'k  main main f'
+    'j  i  h  g';
+
+    display: grid;
+    height: 75vh;
+    width: 75vw;
+    margin-left: var(--margin-x);
+    margin-right: var(--margin-x);
+    margin-top: var(--margin-y);
+    margin-bottom: var(--margin-y);
+    border: 3px solid var(--mordecai-grey-d);
+    background: var(--margaret-grey);
+    box-shadow: 10px 10px 5px var(--mordecai-grey-d);
+}
+.card {
+    background-image: unset;
+    display: flex;
+    margin-left: calc(0.05*var(--margin-x));
+    margin-right: calc(0.05*var(--margin-x));
+    margin-top: calc(0.05*var(--margin-y));
+    margin-bottom: calc(0.05*var(--margin-y));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:nth-child(1) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: a;
+    animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.card:nth-child(2) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: b;
+    animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.card:nth-child(3) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: c;
+    animation-delay: calc(3 * var(--stagger-delay));
+}
+
+.card:nth-child(4) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: d;
+    animation-delay: calc(4 * var(--stagger-delay));
+}
+
+.card:nth-child(5) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: e;
+    animation-delay: calc(5 * var(--stagger-delay));
+}
+
+.card:nth-child(6) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: f;
+    animation-delay: calc(6 * var(--stagger-delay));
+}
+
+.card:nth-child(7) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: g;
+    animation-delay: calc(7 * var(--stagger-delay));
+}
+
+.card:nth-child(8) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: h;
+    animation-delay: calc(8 * var(--stagger-delay));
+}
+
+.card:nth-child(9) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: i;
+    animation-delay: calc(9 * var(--stagger-delay));
+}
+
+.card:nth-child(10) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: j;
+    animation-delay: calc(10 * var(--stagger-delay));
+}
+
+.card:nth-child(11) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: k;
+    animation-delay: calc(11 * var(--stagger-delay));
+}
+
+.card:nth-child(12) {
+    background-image: url(Resources/book.png);
+    background-repeat: round;
+    grid-area: l;
+    animation-delay: calc(12 * var(--stagger-delay));
+}
+
+.card:last-child {
+    background-image: url(Resources/Drive.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-area: main;
+    animation-delay: calc(13 * var(--stagger-delay));
+}
