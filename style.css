@@ -32,6 +32,7 @@ body, html {
     'k  main main f'
     'j  i  h  g';
 
+    align-self: center;
     display: grid;
     height: 75vh;
     width: 75vw;
@@ -52,7 +53,10 @@ body, html {
     animation: borderloop 60s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     animation-delay: borderloop 100ms;
     box-shadow: 10px 10px 5px var(--shadowColor);
+
+    
 }
+
 .card {
     background-image: unset;
     display: flex;
@@ -151,84 +155,96 @@ body, html {
 
 .card:nth-child(1) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: a;
     animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(2) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: b;
     animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(3) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: c;
     animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(4) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: d;
     animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(5) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: e;
     animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(6) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: f;
     animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(7) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: g;
     animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(8) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: h;
     animation-delay: calc(300 * var(--stagger-delay));
 }
 
 .card:nth-child(9) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: i;
     animation-delay: calc(200 * var(--stagger-delay));
 }
 
 .card:nth-child(10) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: j;
     animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(11) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: k;
     animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(12) {
     background-image: url(Resources/book.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
     grid-area: l;
     animation-delay: calc(200 * var(--stagger-delay));
 }
@@ -237,7 +253,43 @@ body, html {
     background-image: url(Resources/Drive.png);
     background-repeat: no-repeat;
     background-size: 256px 256px;
-    background-position: center;
+    background-position: 50% 50%;
     grid-area: main;
     animation-delay: calc(400 * var(--stagger-delay));
+}
+
+.invisibleI {
+    position: absolute;
+}
+
+@media(max-width:770px) {
+    .grid{
+        height: 75vh;
+        width: 90vw;
+        right: 50%;
+        left: 50%;
+        margin-left: 2%;
+        margin-right: 10%;
+        margin-top: calc(0.1*var(--margin-y));
+        margin-bottom: calc(0.1*var(--margin-y));
+    }
+
+    .card {
+        background-image: unset;
+        display: flex;
+        margin-left: calc(0.05*var(--margin-x));
+        margin-right: calc(0.05*var(--margin-x));
+        margin-top: calc(0.05*var(--margin-y));
+        margin-bottom: calc(0.05*var(--margin-y));
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        animation: entrance 400ms normal forwards ease-in-out;
+        animation-fill-mode: backwards;
+    }
+
+    .card:last-child{
+        background-position: 50% -100%;
+    }
 }
