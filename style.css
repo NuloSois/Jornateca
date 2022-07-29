@@ -154,39 +154,39 @@ body, html {
 }
 
 .card:nth-child(1) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/search.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: a;
-    animation-delay: calc(200 * var(--stagger-delay));
+    animation-delay: calc(100 * var(--stagger-delay));
 }
 
 .card:nth-child(2) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: b;
-    animation-delay: calc(100 * var(--stagger-delay));
+    animation-delay: calc(150 * var(--stagger-delay));
 }
 
 .card:nth-child(3) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: c;
-    animation-delay: calc(100 * var(--stagger-delay));
-}
-
-.card:nth-child(4) {
-    background-image: url(Resources/book.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    grid-area: d;
     animation-delay: calc(200 * var(--stagger-delay));
 }
 
+.card:nth-child(4) {
+    background-image: url(Resources/settings.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: d;
+    animation-delay: calc(250 * var(--stagger-delay));
+}
+
 .card:nth-child(5) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: e;
@@ -194,59 +194,59 @@ body, html {
 }
 
 .card:nth-child(6) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: f;
-    animation-delay: calc(300 * var(--stagger-delay));
+    animation-delay: calc(350 * var(--stagger-delay));
 }
 
 .card:nth-child(7) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/list.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: g;
-    animation-delay: calc(300 * var(--stagger-delay));
+    animation-delay: calc(400 * var(--stagger-delay));
 }
 
 .card:nth-child(8) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: h;
-    animation-delay: calc(300 * var(--stagger-delay));
+    animation-delay: calc(450 * var(--stagger-delay));
 }
 
 .card:nth-child(9) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: i;
-    animation-delay: calc(200 * var(--stagger-delay));
+    animation-delay: calc(500 * var(--stagger-delay));
 }
 
 .card:nth-child(10) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/publish.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: j;
-    animation-delay: calc(100 * var(--stagger-delay));
+    animation-delay: calc(550 * var(--stagger-delay));
 }
 
 .card:nth-child(11) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: k;
-    animation-delay: calc(100 * var(--stagger-delay));
+    animation-delay: calc(600 * var(--stagger-delay));
 }
 
 .card:nth-child(12) {
-    background-image: url(Resources/book.png);
+    background-image: url(Resources/rock.png);
     background-repeat: no-repeat;
     background-size: contain;
     grid-area: l;
-    animation-delay: calc(200 * var(--stagger-delay));
+    animation-delay: calc(650 * var(--stagger-delay));
 }
 
 .card:last-child {
@@ -255,7 +255,7 @@ body, html {
     background-size: 256px 256px;
     background-position: 50% 50%;
     grid-area: main;
-    animation-delay: calc(400 * var(--stagger-delay));
+    animation-delay: calc(700 * var(--stagger-delay));
 }
 
 .invisibleI {
